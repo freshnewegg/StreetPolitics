@@ -26,13 +26,14 @@ class Fighting_Scene: SKScene, SKPhysicsContactDelegate {
         setUpRecognizers()
         setUpGround()
         
-        dispatch_async(dispatch_get_global_queue(DISPATCH_QUEUE_PRIORITY_DEFAULT, 0), {
+        //threading example
+        /*dispatch_async(dispatch_get_global_queue(DISPATCH_QUEUE_PRIORITY_DEFAULT, 0), {
             while (true){
                 if (self.brain.isEmpty() == false){
                     self.displayAction(self.brain.getNext()!)
                 }
             }
-        })
+        })*/
     }
     
     //set up the ground in the game
@@ -47,20 +48,33 @@ class Fighting_Scene: SKScene, SKPhysicsContactDelegate {
             ground.physicsBody?.dynamic = false
             addChild(ground)
         }
-
     }
     
     func initShooterScene(){
-        //initialize the character
-        let sprite = SKSpriteNode(imageNamed: "sprite0")
+        //setup brain
+        brain.myScene = self
+        
+        //initialize the character animations
         let characterAtlas = SKTextureAtlas(named: "sprite")
         for index in 1...characterAtlas.textureNames.count{
             let imgName = String(format: "sprite%01d",index-1)
             characterAnimation += [characterAtlas.textureNamed(imgName)]
         }
+        
+        //set up the character nodes
+        let sprite = SKSpriteNode(imageNamed: "sprite0")
         let characterNode = self.childNodeWithName("characterNode")
         characterNode?.physicsBody = SKPhysicsBody(circleOfRadius: sprite.size.width)
         characterNode?.physicsBody?.dynamic = true
+        
+        //setup the healthbar
+        var progressValue = 200
+        var HealthBar = SKSpriteNode(color:SKColor.redColor(), size: CGSize(width: progressValue, height: 30))
+        HealthBar.position = CGPointMake(self.frame.size.width / 3, self.frame.size.height / 1.05)
+        HealthBar.anchorPoint = CGPointMake(0.0, 0.5)
+        HealthBar.zPosition = 4
+        self.addChild(HealthBar)
+        
     }
     
     //set up the action recognition

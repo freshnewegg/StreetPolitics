@@ -18,20 +18,18 @@ class FightingBrain{
         case COUNTER
     }
     
+    var myScene : Fighting_Scene? = nil
+    
     var queue = Queue<action>()
     
     //send action to server
     func addAction(currentAction: action){
-         queue.enQueue(currentAction)
+        queue.enQueue(currentAction)
+        self.execute()
     }
     
-    //should return the next action
-    func getNext() -> FightingBrain.action?{
-        if (!self.queue.isEmpty()){
-            return self.queue.deQueue()
-        } else{
-            return nil
-        }
+    func execute(){
+        myScene?.displayAction(self.queue.deQueue()!)
     }
     
     func isEmpty() -> Bool{
