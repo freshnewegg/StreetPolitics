@@ -16,15 +16,21 @@ class Fighting_Scene: SKScene, SKPhysicsContactDelegate {
     var halfOfScreenWidth = UIScreen.mainScreen().bounds.width/2
     
     //character animations
+    var myPlayer : Player? = nil
     var characterAnimation = [SKTexture]()
     
     //The class that handles the actions
     var brain = FightingBrain()
     
+    //time for frame by frame actions
+    private var lastUpdateTime: CFTimeInterval = 0
+    
     override func didMoveToView(view: SKView) {
         initShooterScene()
         setUpRecognizers()
         setUpGround()
+        
+        physicsWorld.contactDelegate = self
         
         //threading example
         /*dispatch_async(dispatch_get_global_queue(DISPATCH_QUEUE_PRIORITY_DEFAULT, 0), {
@@ -61,15 +67,17 @@ class Fighting_Scene: SKScene, SKPhysicsContactDelegate {
             characterAnimation += [characterAtlas.textureNamed(imgName)]
         }
         
-        //set up the character nodes
-        let sprite = SKSpriteNode(imageNamed: "sprite0")
-        let characterNode = self.childNodeWithName("characterNode")
-        characterNode?.physicsBody = SKPhysicsBody(circleOfRadius: sprite.size.width)
-        characterNode?.physicsBody?.dynamic = true
-        
+        //set up character nodes
+        myPlayer = brain.createPlayer()
+        addChild(myPlayer!)
+
+        //create new sprite node
+        addChild(brain.createPlayer()!)
+
         //setup the healthbar
         var progressValue = 200
         var HealthBar = SKSpriteNode(color:SKColor.redColor(), size: CGSize(width: progressValue, height: 30))
+        HealthBar.name = "healthbar"
         HealthBar.position = CGPointMake(self.frame.size.width / 3, self.frame.size.height / 1.05)
         HealthBar.anchorPoint = CGPointMake(0.0, 0.5)
         HealthBar.zPosition = 4
@@ -90,46 +98,78 @@ class Fighting_Scene: SKScene, SKPhysicsContactDelegate {
     //send the action to the brain
     func Tap(recognizer: UIGestureRecognizer){
         let touchType = recognizer
-
-        let characterNode = self.childNodeWithName("characterNode")
-        if (characterNode != nil){
+        if (myPlayer != nil){
             //determine location of touch
             let location = touchType.locationInView(self.view)
             //determines what type of action is pressed and it sends it to be applied
             if (touchType.isKindOfClass(UITapGestureRecognizer)){
                 //ACTION: ATTACK & COUNTER
                 if (location.x > halfOfScreenWidth){
-                    brain.addAction(FightingBrain.action.ATTACK)
+                    brain.addAction(Player.actionState.ATTACK)
                 } else if (location.x < halfOfScreenWidth){
-                    brain.addAction(FightingBrain.action.COUNTER)
+                    brain.addAction(Player.actionState.BLOCK)
                 }
                 //ACTION: MOVE RIGHT & LEFT
             } else if touchType.isKindOfClass(UILongPressGestureRecognizer) && touchType.state == .Began{
                 if (location.x > halfOfScreenWidth){
-                    brain.addAction(FightingBrain.action.MOVERIGHT)
+                    brain.addAction(Player.actionState.MOVERIGHT)
                 } else if (location.x < halfOfScreenWidth){
-                    brain.addAction(FightingBrain.action.MOVELEFT)
+                    brain.addAction(Player.actionState.MOVELEFT)
                 }
             }
         }
     }
     
     //move the character
-    func displayAction(action : FightingBrain.action){
-        let myCharacter = self.childNodeWithName("characterNode")
-        if (myCharacter != nil){
+    func displayAction(action : Player.actionState){
+        if (myPlayer != nil){
             switch action{
             case .MOVELEFT:
-                myCharacter?.position.x -= 20
+                myPlayer?.position.x -= 50
             case .MOVERIGHT:
-                myCharacter?.position.x += 20
+                myPlayer?.position.x += 50
             case .ATTACK:
                 let animation = SKAction.animateWithTextures(characterAnimation, timePerFrame: 0.25)
-                myCharacter?.runAction(animation)
-            case .COUNTER:
+                myPlayer?.runAction(animation)
+            case .BLOCK:
                 //to be added
-                print("counter")
+                print("block")
+            case .NEUTRAL:
+                print("neutral")
             }
+        }
+    }
+    
+    // Called exactly once per frame as long as the scene is presented in a view and isn't paused
+    override func update(currentTime: NSTimeInterval) {
+        var timeSinceLastUpdate = currentTime - lastUpdateTime
+        lastUpdateTime = currentTime
+        if timeSinceLastUpdate > 1 {
+            timeSinceLastUpdate = 1.0 / 60.0
+            lastUpdateTime = currentTime
+        }
+        brain.updateWithTimeSinceLastUpdate(timeSinceLastUpdate)
+    }
+    
+    
+    
+    //manages contact between objects
+    func didBeginContact(contact: SKPhysicsContact!) {
+        var firstBody: SKPhysicsBody!
+        var secondBody: SKPhysicsBody!
+        //print("contact")
+        
+        if contact.bodyA.categoryBitMask < contact.bodyB.categoryBitMask {
+            firstBody = contact.bodyA
+            secondBody = contact.bodyB
+        }
+        else {
+            firstBody = contact.bodyB
+            secondBody = contact.bodyA
+        }
+        
+        if (firstBody.categoryBitMask == FightingBrain.CollisionTypes.PLAYER2.rawValue && secondBody.categoryBitMask == FightingBrain.CollisionTypes.HITBOX.rawValue){
+            print("damaged p2")
         }
     }
 }

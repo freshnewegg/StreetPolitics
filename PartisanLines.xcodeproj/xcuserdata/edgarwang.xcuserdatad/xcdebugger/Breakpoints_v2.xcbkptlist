@@ -10,11 +10,11 @@
             ignoreCount = "0"
             continueAfterRunningActions = "No"
             filePath = "PartisanLines/FightingScene.swift"
-            timestampString = "483472802.107288"
+            timestampString = "483819137.766374"
             startingColumnNumber = "9223372036854775807"
             endingColumnNumber = "9223372036854775807"
-            startingLineNumber = "24"
-            endingLineNumber = "24"
+            startingLineNumber = "28"
+            endingLineNumber = "28"
             landmarkName = "didMoveToView(_:)"
             landmarkType = "5">
          </BreakpointContent>
@@ -128,12 +128,12 @@
             ignoreCount = "0"
             continueAfterRunningActions = "No"
             filePath = "PartisanLines/FightingScene.swift"
-            timestampString = "483515236.002187"
+            timestampString = "483917913.615356"
             startingColumnNumber = "9223372036854775807"
             endingColumnNumber = "9223372036854775807"
-            startingLineNumber = "90"
-            endingLineNumber = "90"
-            landmarkName = "Tap(_:)"
+            startingLineNumber = "94"
+            endingLineNumber = "94"
+            landmarkName = "setUpRecognizers()"
             landmarkType = "5">
          </BreakpointContent>
       </BreakpointProxy>
@@ -144,12 +144,12 @@
             ignoreCount = "0"
             continueAfterRunningActions = "No"
             filePath = "PartisanLines/FightingScene.swift"
-            timestampString = "483515236.002187"
+            timestampString = "483917913.615356"
             startingColumnNumber = "9223372036854775807"
             endingColumnNumber = "9223372036854775807"
-            startingLineNumber = "90"
-            endingLineNumber = "90"
-            landmarkName = "Tap(_:)"
+            startingLineNumber = "94"
+            endingLineNumber = "94"
+            landmarkName = "setUpRecognizers()"
             landmarkType = "5">
          </BreakpointContent>
       </BreakpointProxy>
@@ -160,11 +160,11 @@
             ignoreCount = "0"
             continueAfterRunningActions = "No"
             filePath = "PartisanLines/FightingScene.swift"
-            timestampString = "483508367.717782"
+            timestampString = "483915545.099462"
             startingColumnNumber = "9223372036854775807"
             endingColumnNumber = "9223372036854775807"
-            startingLineNumber = "42"
-            endingLineNumber = "42"
+            startingLineNumber = "48"
+            endingLineNumber = "48"
             landmarkName = "setUpGround()"
             landmarkType = "5">
          </BreakpointContent>
@@ -192,11 +192,11 @@
             ignoreCount = "0"
             continueAfterRunningActions = "No"
             filePath = "PartisanLines/FightingBrain.swift"
-            timestampString = "483515291.189144"
+            timestampString = "483917116.985744"
             startingColumnNumber = "9223372036854775807"
             endingColumnNumber = "9223372036854775807"
-            startingLineNumber = "46"
-            endingLineNumber = "46"
+            startingLineNumber = "86"
+            endingLineNumber = "86"
             landmarkName = "FightingBrain"
             landmarkType = "3">
          </BreakpointContent>
@@ -208,11 +208,11 @@
             ignoreCount = "0"
             continueAfterRunningActions = "No"
             filePath = "PartisanLines/FightingScene.swift"
-            timestampString = "483472802.107288"
+            timestampString = "483819137.766374"
             startingColumnNumber = "9223372036854775807"
             endingColumnNumber = "9223372036854775807"
-            startingLineNumber = "25"
-            endingLineNumber = "25"
+            startingLineNumber = "29"
+            endingLineNumber = "29"
             landmarkName = "didMoveToView(_:)"
             landmarkType = "5">
          </BreakpointContent>
@@ -224,11 +224,11 @@
             ignoreCount = "0"
             continueAfterRunningActions = "No"
             filePath = "PartisanLines/FightingScene.swift"
-            timestampString = "483472802.107288"
+            timestampString = "483819137.766374"
             startingColumnNumber = "9223372036854775807"
             endingColumnNumber = "9223372036854775807"
-            startingLineNumber = "26"
-            endingLineNumber = "26"
+            startingLineNumber = "30"
+            endingLineNumber = "30"
             landmarkName = "didMoveToView(_:)"
             landmarkType = "5">
          </BreakpointContent>
@@ -236,17 +236,17 @@
       <BreakpointProxy
          BreakpointExtensionID = "Xcode.Breakpoint.FileBreakpoint">
          <BreakpointContent
-            shouldBeEnabled = "Yes"
+            shouldBeEnabled = "No"
             ignoreCount = "0"
             continueAfterRunningActions = "No"
-            filePath = "PartisanLines/CharacterNode.swift"
-            timestampString = "483473089.645728"
+            filePath = "PartisanLines/Player.swift"
+            timestampString = "483819137.766374"
             startingColumnNumber = "9223372036854775807"
             endingColumnNumber = "9223372036854775807"
-            startingLineNumber = "21"
-            endingLineNumber = "21"
-            landmarkName = "execute(_:)"
-            landmarkType = "5">
+            startingLineNumber = "23"
+            endingLineNumber = "23"
+            landmarkName = "Player"
+            landmarkType = "3">
          </BreakpointContent>
       </BreakpointProxy>
       <BreakpointProxy
@@ -256,13 +256,13 @@
             ignoreCount = "0"
             continueAfterRunningActions = "No"
             filePath = "PartisanLines/FightingBrain.swift"
-            timestampString = "483515052.275602"
+            timestampString = "483917116.985744"
             startingColumnNumber = "9223372036854775807"
             endingColumnNumber = "9223372036854775807"
-            startingLineNumber = "26"
-            endingLineNumber = "26"
-            landmarkName = "addAction(_:)"
-            landmarkType = "5">
+            startingLineNumber = "28"
+            endingLineNumber = "28"
+            landmarkName = "FightingBrain"
+            landmarkType = "3">
          </BreakpointContent>
       </BreakpointProxy>
       <BreakpointProxy
@@ -272,11 +272,11 @@
             ignoreCount = "0"
             continueAfterRunningActions = "No"
             filePath = "PartisanLines/FightingScene.swift"
-            timestampString = "483508030.099116"
+            timestampString = "483915545.099462"
             startingColumnNumber = "9223372036854775807"
             endingColumnNumber = "9223372036854775807"
-            startingLineNumber = "28"
-            endingLineNumber = "28"
+            startingLineNumber = "34"
+            endingLineNumber = "34"
             landmarkName = "didMoveToView(_:)"
             landmarkType = "5">
          </BreakpointContent>
@@ -304,12 +304,58 @@
             ignoreCount = "0"
             continueAfterRunningActions = "No"
             filePath = "PartisanLines/FightingBrain.swift"
-            timestampString = "483515052.275602"
+            timestampString = "483917116.985744"
             startingColumnNumber = "9223372036854775807"
             endingColumnNumber = "9223372036854775807"
-            startingLineNumber = "26"
-            endingLineNumber = "26"
-            landmarkName = "addAction(_:)"
+            startingLineNumber = "28"
+            endingLineNumber = "28"
+            landmarkName = "FightingBrain"
+            landmarkType = "3">
+         </BreakpointContent>
+      </BreakpointProxy>
+      <BreakpointProxy
+         BreakpointExtensionID = "Xcode.Breakpoint.FileBreakpoint">
+         <BreakpointContent
+            shouldBeEnabled = "No"
+            ignoreCount = "0"
+            continueAfterRunningActions = "No"
+            filePath = "PartisanLines/FightingScene.swift"
+            timestampString = "483915545.099462"
+            startingColumnNumber = "9223372036854775807"
+            endingColumnNumber = "9223372036854775807"
+            startingLineNumber = "37"
+            endingLineNumber = "37"
+            landmarkName = "didMoveToView(_:)"
+            landmarkType = "5">
+         </BreakpointContent>
+      </BreakpointProxy>
+      <BreakpointProxy
+         BreakpointExtensionID = "Xcode.Breakpoint.FileBreakpoint">
+         <BreakpointContent
+            shouldBeEnabled = "No"
+            ignoreCount = "0"
+            continueAfterRunningActions = "No"
+            filePath = "PartisanLines/Player.swift"
+            timestampString = "483578815.890815"
+            startingColumnNumber = "9223372036854775807"
+            endingColumnNumber = "9223372036854775807"
+            startingLineNumber = "8"
+            endingLineNumber = "8">
+         </BreakpointContent>
+      </BreakpointProxy>
+      <BreakpointProxy
+         BreakpointExtensionID = "Xcode.Breakpoint.FileBreakpoint">
+         <BreakpointContent
+            shouldBeEnabled = "No"
+            ignoreCount = "0"
+            continueAfterRunningActions = "No"
+            filePath = "PartisanLines/Player.swift"
+            timestampString = "483819137.766374"
+            startingColumnNumber = "9223372036854775807"
+            endingColumnNumber = "9223372036854775807"
+            startingLineNumber = "31"
+            endingLineNumber = "31"
+            landmarkName = "init(spriteName:xStartPosition:)"
             landmarkType = "5">
          </BreakpointContent>
       </BreakpointProxy>
@@ -320,12 +366,44 @@
             ignoreCount = "0"
             continueAfterRunningActions = "No"
             filePath = "PartisanLines/FightingScene.swift"
-            timestampString = "483508656.663422"
+            timestampString = "483917913.615356"
             startingColumnNumber = "9223372036854775807"
             endingColumnNumber = "9223372036854775807"
-            startingLineNumber = "31"
-            endingLineNumber = "31"
-            landmarkName = "didMoveToView(_:)"
+            startingLineNumber = "70"
+            endingLineNumber = "70"
+            landmarkName = "initShooterScene()"
+            landmarkType = "5">
+         </BreakpointContent>
+      </BreakpointProxy>
+      <BreakpointProxy
+         BreakpointExtensionID = "Xcode.Breakpoint.FileBreakpoint">
+         <BreakpointContent
+            shouldBeEnabled = "No"
+            ignoreCount = "0"
+            continueAfterRunningActions = "No"
+            filePath = "PartisanLines/FightingScene.swift"
+            timestampString = "483917913.615356"
+            startingColumnNumber = "9223372036854775807"
+            endingColumnNumber = "9223372036854775807"
+            startingLineNumber = "158"
+            endingLineNumber = "158"
+            landmarkName = "didBeginContact(_:)"
+            landmarkType = "5">
+         </BreakpointContent>
+      </BreakpointProxy>
+      <BreakpointProxy
+         BreakpointExtensionID = "Xcode.Breakpoint.FileBreakpoint">
+         <BreakpointContent
+            shouldBeEnabled = "No"
+            ignoreCount = "0"
+            continueAfterRunningActions = "No"
+            filePath = "PartisanLines/FightingScene.swift"
+            timestampString = "483917942.517663"
+            startingColumnNumber = "9223372036854775807"
+            endingColumnNumber = "9223372036854775807"
+            startingLineNumber = "171"
+            endingLineNumber = "171"
+            landmarkName = "didBeginContact(_:)"
             landmarkType = "5">
          </BreakpointContent>
       </BreakpointProxy>

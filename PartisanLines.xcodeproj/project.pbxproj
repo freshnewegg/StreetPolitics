@@ -25,7 +25,7 @@
 		2FCEEB131CD091A20042AD6C /* iPhone6Portrait.png in Resources */ = {isa = PBXBuildFile; fileRef = 2FCEEB101CD091A20042AD6C /* iPhone6Portrait.png */; };
 		2FCEEB151CD110FC0042AD6C /* FightingBrain.swift in Sources */ = {isa = PBXBuildFile; fileRef = 2FCEEB141CD110FC0042AD6C /* FightingBrain.swift */; };
 		2FCEEB171CD115DF0042AD6C /* Queue.swift in Sources */ = {isa = PBXBuildFile; fileRef = 2FCEEB161CD115DF0042AD6C /* Queue.swift */; };
-		2FCEEB191CD129F80042AD6C /* CharacterNode.swift in Sources */ = {isa = PBXBuildFile; fileRef = 2FCEEB181CD129F80042AD6C /* CharacterNode.swift */; };
+		2FCEEB191CD129F80042AD6C /* Player.swift in Sources */ = {isa = PBXBuildFile; fileRef = 2FCEEB181CD129F80042AD6C /* Player.swift */; };
 		2FDFA4281CD0819500BFD92B /* purplebrick.png in Resources */ = {isa = PBXBuildFile; fileRef = 2FDFA4271CD0819500BFD92B /* purplebrick.png */; };
 /* End PBXBuildFile section */
 
@@ -62,7 +62,7 @@
 		2FCEEB101CD091A20042AD6C /* iPhone6Portrait.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = iPhone6Portrait.png; sourceTree = "<group>"; };
 		2FCEEB141CD110FC0042AD6C /* FightingBrain.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = FightingBrain.swift; sourceTree = "<group>"; };
 		2FCEEB161CD115DF0042AD6C /* Queue.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = Queue.swift; sourceTree = "<group>"; };
-		2FCEEB181CD129F80042AD6C /* CharacterNode.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = CharacterNode.swift; sourceTree = "<group>"; };
+		2FCEEB181CD129F80042AD6C /* Player.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = Player.swift; sourceTree = "<group>"; };
 		2FDFA4271CD0819500BFD92B /* purplebrick.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = purplebrick.png; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
@@ -106,7 +106,7 @@
 			isa = PBXGroup;
 			children = (
 				2F870F361CC05D1D007C8C5D /* FightingScene.swift */,
-				2FCEEB181CD129F80042AD6C /* CharacterNode.swift */,
+				2FCEEB181CD129F80042AD6C /* Player.swift */,
 				2FCEEB141CD110FC0042AD6C /* FightingBrain.swift */,
 				2F870F161CC0586F007C8C5D /* GameScene.swift */,
 				2F870F1A1CC0586F007C8C5D /* Main.storyboard */,
@@ -272,7 +272,7 @@
 			buildActionMask = 2147483647;
 			files = (
 				2F870F171CC0586F007C8C5D /* GameScene.swift in Sources */,
-				2FCEEB191CD129F80042AD6C /* CharacterNode.swift in Sources */,
+				2FCEEB191CD129F80042AD6C /* Player.swift in Sources */,
 				2FCEEB171CD115DF0042AD6C /* Queue.swift in Sources */,
 				2FCEEB151CD110FC0042AD6C /* FightingBrain.swift in Sources */,
 				2F870F371CC05D1D007C8C5D /* FightingScene.swift in Sources */,
